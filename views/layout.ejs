@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= typeof pageTitle !== "undefined" ?  pageTitle :"Nôi Việt"%></title>
-</head>
-<body>
-    <head>
-        <h2 class="">Header</h2>
-    </head>
-    <main class="">
-        <%- body%>
-    </main>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      <%= typeof pageTitle !== "undefined" ? pageTitle :"Nôi Việt"%>
+    </title>
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/fonts/stylesheet.css">
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h2 class="header">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet, ipsum.</h2>
+    </header>
+    <main class=""><%- body%></main>
     <footer class="">
-        <h2 class="">Footer</h2>
+      <h2 class="">Footer</h2>
     </footer>
-</body>
+  </body>
 </html>
