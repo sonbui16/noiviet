@@ -7,17 +7,127 @@
       <%= typeof pageTitle !== "undefined" ? pageTitle :"Nôi Việt"%>
     </title>
 
-    <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/fonts/stylesheet.css">
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/fonts/stylesheet.css" />
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" /> -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
   <body>
-    <header>
-      <h2 class="header">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet, ipsum.</h2>
+    <!-- =============================Header========================= -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+              <ul class="navbar__list">
+                <li class="navbar__item">
+                  <a href="#!" class="navbar__link">Giới thiệu</a>
+                </li>
+                <li class="navbar__item">
+                  <a href="#!" class="navbar__link">Bộ sưu tập</a>
+                </li>
+                <li class="navbar__item">
+                  <a href="#!" class="navbar__link">Thời trang</a>
+                </li>
+                <li class="navbar__item">
+                  <a href="#!" class="navbar__link">Hệ thống</a>
+                </li>
+              </ul>
+            </nav>
+      </div>
     </header>
+    <!-- =============================Main========================= -->
     <main class=""><%- body%></main>
-    <footer class="">
-      <h2 class="">Footer</h2>
+    <!-- =============================Footer========================= -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__row">
+          <div class="footer__column">
+            <h3 class="footer__heading">Giới thiệu</h3>
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a href="#!" class="footer__link">Giới thiệu</a>
+              </li>
+              <li class="footer__item">
+                <a href="#!" class="footer__link">Chính sách đổi trả</a>
+              </li>
+              <li class="footer__item">
+                <a href="#!" class="footer__link">Chính sách bảo mật</a>
+              </li>
+              <li class="footer__item">
+                <a href="#!" class="footer__link">Điều khoản dịch vụ</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__column">
+            <h3 class="footer__heading">Thông tin công ty</h3>
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a href="#!" class="footer__link"
+                  >CÔNG TY CỔ PHẦN NU VIỆT NAM</a
+                >
+              </li>
+              <li class="footer__item">
+                <a href="#!" class="footer__link">Mã số thuế: 0107126252</a>
+              </li>
+              <li class="footer__item">
+                Địa chỉ
+                <a href="#!" class="footer__link"
+                  >Số 2, ngách 6/14 phố Đội Nhân, Phường Vĩnh Phúc, Quận Ba
+                  Đình, Thành phố Hà Nội, Việt Nam</a
+                >
+              </li>
+              <li class="footer__item">
+                Điện thoại bàn:
+                <a href="#!" class="footer__link">024.66512299</a>
+              </li>
+
+              <li class="footer__item">
+                Hotline CSKH:
+                <a href="#!" class="footer__link">024.66512299</a>
+              </li>
+
+              <li class="footer__item">
+                Hotline kênh Đại lý:
+                <a href="#!" class="footer__link">024.66512299</a>
+              </li>
+
+              <li class="footer__item">
+                Email:
+                <a href="#!" class="footer__link">online@nous.com.vn</a>
+              </li>
+
+              <li class="footer__item">
+                Email: online@nous.com.vn
+                <a href="#!" class="footer__link"
+                  >Ngày cấp: 30/03/2007, Nơi cấp : Sở kể hoạch và đầu tư thành
+                  phố Hà Nội</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer__column">
+            <h3 class="footer__heading">Hệ thống cửa hàng</h3>
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a href="#!" class="footer__link">Giới thiệu</a>
+              </li>
+              <li class="footer__item">
+                <a href="#!" class="footer__link">Chính sách đổi trả</a>
+              </li>
+              <li class="footer__item">
+                <a href="#!" class="footer__link">Chính sách bảo mật</a>
+              </li>
+              <li class="footer__item">
+                <a href="#!" class="footer__link">Điều khoản dịch vụ</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </footer>
   </body>
 </html>
