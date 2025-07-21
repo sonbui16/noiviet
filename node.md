@@ -13,7 +13,7 @@ Action:Tương ứng với các hành động c-r-u-d
 
 # Package kết nối database 
 
-- posgres (kết nối với database)
+- postgres (kết nối với database)
 
 # Cơ sở dữ liêu
 
