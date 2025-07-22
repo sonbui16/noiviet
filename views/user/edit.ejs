@@ -1,4 +1,4 @@
-<h1 class="">Thêm người dùng</h1>
+<h1 class="">Sửa người dùng</h1>
 <form action="" class="" method="post">
   <div class="mb-3">
     <label for="" class="">Tên</label>
@@ -7,6 +7,7 @@
       class="form-control"
       placeholder="Nhập tên người dùng"
       name="name"
+      value="<%= user.name%>"
       required
     />
   </div>
@@ -14,18 +15,18 @@
     <label for="" class="">Email</label>
     <input
       type="email"
-       class="form-control"
-
+      class="form-control"
       placeholder="Nhập email người dùng"
       name="email"
+      value="<%= user.email %>"
       required
     />
   </div>
   <div class="mb-3">
     <label for="" class="">Trạng thái</label>
     <select name="status" id="" class="form-control">
-      <option value="0" class="">Kích hoạt</option>
-      <option value="1" class="">Không kích hoạt</option>
+      <option  value="0" <%= user.status ? 'selected':"" %>  class="">Kích hoạt</option>
+      <option value="1" <%= user.status ? '':"selected" %> class="">Không kích hoạt</option>
     </select>
   </div>
   <button class="btn btn-primary">Lưu</button>
