@@ -15,7 +15,6 @@ const { Op, where } = require("sequelize");
 const { name } = require("ejs");
 
 module.exports = {
-  
   index: async (req, res, next) => {
     const pageTitle = "Nôi Việt";
     try {
@@ -63,10 +62,16 @@ module.exports = {
         users,
         page,
         totalPages,
-        pageTitle
-      },);
+        pageTitle,
+      });
     } catch (error) {
       return next(error);
     }
+  },
+  aboutUs: async (req, res, next) => {
+    const pageTitle = "Về chúng tôi";
+    res.render("home/about-us", {
+      pageTitle,
+    });
   },
 };

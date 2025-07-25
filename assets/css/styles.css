@@ -99,19 +99,16 @@ li {
 }
 
 header__inner {
-
 }
 .navbar {
    /* top: -20px; */
    display: flex;
    /* background-color: yellow; */
    padding: 20px 0;
-
 }
 
 .header {
    position:sticky;
-
    /* border-bottom: 4px solid red; */
 }
 
