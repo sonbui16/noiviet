@@ -1,16 +1,14 @@
-<div class="container d-flex flex-wrap justify-content-evenly row-gap-4 mx-auto ">
-<% users.forEach(user => { %>
+<div class="container d-flex flex-wrap row-gap-4 mx-auto <%= users.length > 4 ?"justify-content-evenly" : "" %>">
+  <% users.forEach(user=> { %>
     <div class="card " style="width: 25rem;">
-        <img src="https://picsum.photos/200" class="card-img-top" alt="...">
-        <div class =" p-2">
-            <h5 class="card-title">Bàn học thông minh smart D(Màu xanh – dài 1m2 + ghế G20)</h5>
-            <p class="card-text">13.300.000 ₫ – 17.100.000 ₫</p>
-            <a href="" class="btn btn-primary" >Đặt hàng</a>
-        </div>
-        
-
+      <img src="https://picsum.photos/200" class="card-img-top" alt="...">
+      <div class=" p-2">
+        <h5 class="card-title">Bàn học thông minh smart D(Màu xanh – dài 1m2 + ghế G20)</h5>
+        <p class="card-text">13.300.000 ₫ – 17.100.000 ₫</p>
+        <a href="" class="btn btn-primary">Đặt hàng</a>
+      </div>
     </div>
-<% }) %>
+    <% }) %>
 </div>
 
 
@@ -27,12 +25,7 @@
       </select>
     </div>
     <div class="col-7">
-      <input
-        type="search"
-        class="form-control"
-        name="keyword"
-        placeholder="Từ khoá..."
-      />
+      <input type="search" class="form-control" name="keyword" placeholder="Từ khoá..." />
     </div>
     <div class="col-2 d-grid">
       <button class="btn btn-success">Tìm kiếm</button>
@@ -51,38 +44,46 @@
     </tr>
   </thead>
   <tbody class="">
-    <% users.forEach((user , index ) => { %>
-    <tr class="">
-      <td><%= index + 1 %></td>
-      <td><%= user.name %></td>
-      <td><%= user.email %></td>
-      <td width="5%">
-        <%- user.status ? `<span class="badge bg-success">Kích hoạt</span>`:
-        `<span class="badge bg-danger">Chưa kích hoạt</span>` %>
-      </td>
-      <td>
-        <a href="/users/edit/<%= user.id %>" class="btn btn-warning">Sửa</a>
-      </td>
-      <td><a href="" class="btn btn-danger">Xoá</a></td>
-    </tr>
-    <% }) %>
+    <% users.forEach((user , index )=> { %>
+      <tr class="">
+        <td>
+          <%= index + 1 %>
+        </td>
+        <td>
+          <%= user.name %>
+        </td>
+        <td>
+          <%= user.email %>
+        </td>
+        <td width="5%">
+          <%- user.status ? `<span class="badge bg-success">Kích hoạt</span>`:
+            `<span class="badge bg-danger">Chưa kích hoạt</span>` %>
+        </td>
+        <td>
+          <a href="/users/edit/<%= user.id %>" class="btn btn-warning">Sửa</a>
+        </td>
+        <td><a href="" class="btn btn-danger">Xoá</a></td>
+      </tr>
+      <% }) %>
   </tbody>
 </table>
 
-<% if (totalPages > 1) { %>
-<ul class="pagination">
-    <% if (page > 1 ) { %>
-  <li class="page-item"><a class="page-link" href="?page=<%= +page-1 %>">Trước</a></li>
-     
-    <% } %>
-  <% for( let index = 1; index < totalPages; index++ ) { %>
-  <li class="page-item <%= page == index ? "active" : ""%>">
-    <a class="page-link" href="?page=<%= index  %>"><%= index %></a>
-  </li>
-  <% } %>
-      <% if (page< totalPages ) { %>
-  <li class="page-item"><a class="page-link" href="?page=<%= +page+1%>">Sau</a></li>
+<% if (totalPages> 1) { %>
+  <ul class="pagination">
+    <% if (page> 1 ) { %>
+      <li class="page-item"><a class="page-link" href="?page=<%= +page-1 %>">Trước</a></li>
 
-    <% } %>
-</ul>
-<% } %>
+      <% } %>
+        <% for( let index=1; index < totalPages; index++ ) { %>
+          <li class="page-item <%= page == index ? " active" : "" %>">
+            <a class="page-link" href="?page=<%= index  %>">
+              <%= index %>
+            </a>
+          </li>
+          <% } %>
+            <% if (page< totalPages ) { %>
+              <li class="page-item"><a class="page-link" href="?page=<%= +page+1%>">Sau</a></li>
+
+              <% } %>
+  </ul>
+  <% } %>

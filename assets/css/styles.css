@@ -104,7 +104,7 @@ header__inner {
 .navbar {
    /* top: -20px; */
    display: flex;
-   background-color: yellow;
+   /* background-color: yellow; */
    padding: 20px 0;
 
 }
@@ -121,4 +121,7 @@ header__inner {
    font-weight: 500;
    color: black;
    line-height: 1
+}
+.footer .img {
+    max-width: 150px;
 }
