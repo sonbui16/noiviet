@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,6 +6,19 @@
     <title>Trang chủ</title>
 </head>
 <body>
-    <div class="" style ="height:1000px"></div>
+    sonbh421
 </body>
-</html>
+</html> -->
+
+<div class="container d-flex flex-wrap justify-content-evenly row-gap-4 mx-auto ">
+<% users.forEach(user => { %>
+    <div class="card " style="width: 25rem;">
+        <img src="https://picsum.photos/200" class="card-img-top" alt="...">
+        <div class ="p-2">
+            <h5 class="card-title">Bàn học thông minh smart D(Màu xanh – dài 1m2 + ghế G20)</h5>
+            <p class="card-text">13.300.000 ₫ – 17.100.000 ₫</p>
+            <a class="btn btn-primary" href="/products/<%= user.id %>">Đặt hàng</a>
+        </div>
+    </div>
+<% }) %>
+</div>
