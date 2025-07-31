@@ -5,15 +5,38 @@ var expressEJSLayouts = require("express-ejs-layouts");
 var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
+var session = require('express-session')
+var flash = require('connect-flash');
+var passport = require("passport")
 
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
 var productsRouter = require("./routes/products");
 var authRouter = require("./routes/auth");
 var pageRouter = require("./routes/page");
+const {User} = require("./models/index")
 
 
 var app = express();
+app.use(session({
+  secret: 'noiviet',
+  resave: false,
+  saveUninitialized: true,
+  // cookie: { secure: true }
+}))
+app.use(flash());
+app.use(passport.initialize());
+app.use(passport.session());
+
+passport.serializeUser(function(user, done) {
+  done(null, user.id);
+});
+
+passport.deserializeUser(async function(id, done) {
+  const user = await User.findByPK(id);
+  done(null, user)
+  
+});
 
 app.use(express.static(__dirname + '/assets'));
 // view engine setup
