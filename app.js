@@ -14,6 +14,7 @@ var usersRouter = require("./routes/users");
 var productsRouter = require("./routes/products");
 var authRouter = require("./routes/auth");
 var pageRouter = require("./routes/page");
+const passportLocal = require("./passports/passport.local")
 const {User} = require("./models/index")
 
 
@@ -28,12 +29,14 @@ app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
 
+passport.use("local", passportLocal)
+
 passport.serializeUser(function(user, done) {
-  done(null, user.id);
+  done(null, user.id); // Lưu userId vào session
 });
 
 passport.deserializeUser(async function(id, done) {
-  const user = await User.findByPK(id);
+  const user = await User.findByPK(id); //Truy vấn tới database để trả về thông tin user
   done(null, user)
   
 });
