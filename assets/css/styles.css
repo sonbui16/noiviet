@@ -29,11 +29,7 @@ button {
    font-size: inherit;
 }
 
-.container {
-   width: 1170px;
-   max-width: calc(100% - 48px);
-   margin: 0 auto;
-}
+
 
 
 
@@ -71,6 +67,9 @@ button {
    position: relative;
    top: 5px;
 
+}
+.red {
+   color:red;
 }
 
 .footer__link,
